@@ -1,0 +1,65 @@
+/*++
+
+Module Name:
+	chat.h.
+
+Abstract:
+	This contains necessary information for chat window.
+
+Revision History:
+	Date    : Sep 16 2012.
+
+	Author  : Unmesh Joshi (S-2515965).
+		: Koustubha Bhat (S-2516144).
+
+	VUnetID : uji300
+		: kbt350
+
+	Desc    : Created.
+	
+--*/
+
+
+/////////////////////////////////////////////////////////////////////
+//      H E A D E R S.
+/////////////////////////////////////////////////////////////////////
+
+#include <ncurses.h>
+#include <string.h>		//For strlen
+
+
+/////////////////////////////////////////////////////////////////////
+//      M A C R O S.
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+//      S T R U C T U R E S
+/////////////////////////////////////////////////////////////////////
+
+typedef struct tagWIN
+{
+  int iX;
+  int iY;
+  int iHeight;
+  int iWidth;
+
+} WIN, *P_WIN;
+
+typedef struct tagTALKINFO
+{
+  int iSock;
+  WIN *pWin;
+  WINDOW *pWindow;// ncurses' structure
+
+} TALKINFO, *P_TALKINFO;
+
+
+/////////////////////////////////////////////////////////////////////
+//       F U N C T I O N  D E C L A R A T I O N S
+/////////////////////////////////////////////////////////////////////
+
+int InitWindows(TALKINFO *pTalkInfoMe, TALKINFO *pTalkInfoOther);
+void DeInitWindows(TALKINFO *pTalkInfoMe, TALKINFO *pTalkInfoOther);
+
+
