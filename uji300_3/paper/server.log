@@ -1,0 +1,474 @@
+senddetails_1_svc:	Info: Calling AddToList
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+senddetails_1_svc:	Info: Calling AddToList
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: ChunkIndex = 0, Chunksize = 1024, Remain = 217952
+fetchdetails_1_svc:	Info: ChunkIndex = 1, Chunksize = 1024, Remain = 216928
+fetchdetails_1_svc:	Info: ChunkIndex = 2, Chunksize = 1024, Remain = 215904
+fetchdetails_1_svc:	Info: ChunkIndex = 3, Chunksize = 1024, Remain = 214880
+fetchdetails_1_svc:	Info: ChunkIndex = 4, Chunksize = 1024, Remain = 213856
+fetchdetails_1_svc:	Info: ChunkIndex = 5, Chunksize = 1024, Remain = 212832
+fetchdetails_1_svc:	Info: ChunkIndex = 6, Chunksize = 1024, Remain = 211808
+fetchdetails_1_svc:	Info: ChunkIndex = 7, Chunksize = 1024, Remain = 210784
+fetchdetails_1_svc:	Info: ChunkIndex = 8, Chunksize = 1024, Remain = 209760
+fetchdetails_1_svc:	Info: ChunkIndex = 9, Chunksize = 1024, Remain = 208736
+fetchdetails_1_svc:	Info: ChunkIndex = 10, Chunksize = 1024, Remain = 207712
+fetchdetails_1_svc:	Info: ChunkIndex = 11, Chunksize = 1024, Remain = 206688
+fetchdetails_1_svc:	Info: ChunkIndex = 12, Chunksize = 1024, Remain = 205664
+fetchdetails_1_svc:	Info: ChunkIndex = 13, Chunksize = 1024, Remain = 204640
+fetchdetails_1_svc:	Info: ChunkIndex = 14, Chunksize = 1024, Remain = 203616
+fetchdetails_1_svc:	Info: ChunkIndex = 15, Chunksize = 1024, Remain = 202592
+fetchdetails_1_svc:	Info: ChunkIndex = 16, Chunksize = 1024, Remain = 201568
+fetchdetails_1_svc:	Info: ChunkIndex = 17, Chunksize = 1024, Remain = 200544
+fetchdetails_1_svc:	Info: ChunkIndex = 18, Chunksize = 1024, Remain = 199520
+fetchdetails_1_svc:	Info: ChunkIndex = 19, Chunksize = 1024, Remain = 198496
+fetchdetails_1_svc:	Info: ChunkIndex = 20, Chunksize = 1024, Remain = 197472
+fetchdetails_1_svc:	Info: ChunkIndex = 21, Chunksize = 1024, Remain = 196448
+fetchdetails_1_svc:	Info: ChunkIndex = 22, Chunksize = 1024, Remain = 195424
+fetchdetails_1_svc:	Info: ChunkIndex = 23, Chunksize = 1024, Remain = 194400
+fetchdetails_1_svc:	Info: ChunkIndex = 24, Chunksize = 1024, Remain = 193376
+fetchdetails_1_svc:	Info: ChunkIndex = 25, Chunksize = 1024, Remain = 192352
+fetchdetails_1_svc:	Info: ChunkIndex = 26, Chunksize = 1024, Remain = 191328
+fetchdetails_1_svc:	Info: ChunkIndex = 27, Chunksize = 1024, Remain = 190304
+fetchdetails_1_svc:	Info: ChunkIndex = 28, Chunksize = 1024, Remain = 189280
+fetchdetails_1_svc:	Info: ChunkIndex = 29, Chunksize = 1024, Remain = 188256
+fetchdetails_1_svc:	Info: ChunkIndex = 30, Chunksize = 1024, Remain = 187232
+fetchdetails_1_svc:	Info: ChunkIndex = 31, Chunksize = 1024, Remain = 186208
+fetchdetails_1_svc:	Info: ChunkIndex = 32, Chunksize = 1024, Remain = 185184
+fetchdetails_1_svc:	Info: ChunkIndex = 33, Chunksize = 1024, Remain = 184160
+fetchdetails_1_svc:	Info: ChunkIndex = 34, Chunksize = 1024, Remain = 183136
+fetchdetails_1_svc:	Info: ChunkIndex = 35, Chunksize = 1024, Remain = 182112
+fetchdetails_1_svc:	Info: ChunkIndex = 36, Chunksize = 1024, Remain = 181088
+fetchdetails_1_svc:	Info: ChunkIndex = 37, Chunksize = 1024, Remain = 180064
+fetchdetails_1_svc:	Info: ChunkIndex = 38, Chunksize = 1024, Remain = 179040
+fetchdetails_1_svc:	Info: ChunkIndex = 39, Chunksize = 1024, Remain = 178016
+fetchdetails_1_svc:	Info: ChunkIndex = 40, Chunksize = 1024, Remain = 176992
+fetchdetails_1_svc:	Info: ChunkIndex = 41, Chunksize = 1024, Remain = 175968
+fetchdetails_1_svc:	Info: ChunkIndex = 42, Chunksize = 1024, Remain = 174944
+fetchdetails_1_svc:	Info: ChunkIndex = 43, Chunksize = 1024, Remain = 173920
+fetchdetails_1_svc:	Info: ChunkIndex = 44, Chunksize = 1024, Remain = 172896
+fetchdetails_1_svc:	Info: ChunkIndex = 45, Chunksize = 1024, Remain = 171872
+fetchdetails_1_svc:	Info: ChunkIndex = 46, Chunksize = 1024, Remain = 170848
+fetchdetails_1_svc:	Info: ChunkIndex = 47, Chunksize = 1024, Remain = 169824
+fetchdetails_1_svc:	Info: ChunkIndex = 48, Chunksize = 1024, Remain = 168800
+fetchdetails_1_svc:	Info: ChunkIndex = 49, Chunksize = 1024, Remain = 167776
+fetchdetails_1_svc:	Info: ChunkIndex = 50, Chunksize = 1024, Remain = 166752
+fetchdetails_1_svc:	Info: ChunkIndex = 51, Chunksize = 1024, Remain = 165728
+fetchdetails_1_svc:	Info: ChunkIndex = 52, Chunksize = 1024, Remain = 164704
+fetchdetails_1_svc:	Info: ChunkIndex = 53, Chunksize = 1024, Remain = 163680
+fetchdetails_1_svc:	Info: ChunkIndex = 54, Chunksize = 1024, Remain = 162656
+fetchdetails_1_svc:	Info: ChunkIndex = 55, Chunksize = 1024, Remain = 161632
+fetchdetails_1_svc:	Info: ChunkIndex = 56, Chunksize = 1024, Remain = 160608
+fetchdetails_1_svc:	Info: ChunkIndex = 57, Chunksize = 1024, Remain = 159584
+fetchdetails_1_svc:	Info: ChunkIndex = 58, Chunksize = 1024, Remain = 158560
+fetchdetails_1_svc:	Info: ChunkIndex = 59, Chunksize = 1024, Remain = 157536
+fetchdetails_1_svc:	Info: ChunkIndex = 60, Chunksize = 1024, Remain = 156512
+fetchdetails_1_svc:	Info: ChunkIndex = 61, Chunksize = 1024, Remain = 155488
+fetchdetails_1_svc:	Info: ChunkIndex = 62, Chunksize = 1024, Remain = 154464
+fetchdetails_1_svc:	Info: ChunkIndex = 63, Chunksize = 1024, Remain = 153440
+fetchdetails_1_svc:	Info: ChunkIndex = 64, Chunksize = 1024, Remain = 152416
+fetchdetails_1_svc:	Info: ChunkIndex = 65, Chunksize = 1024, Remain = 151392
+fetchdetails_1_svc:	Info: ChunkIndex = 66, Chunksize = 1024, Remain = 150368
+fetchdetails_1_svc:	Info: ChunkIndex = 67, Chunksize = 1024, Remain = 149344
+fetchdetails_1_svc:	Info: ChunkIndex = 68, Chunksize = 1024, Remain = 148320
+fetchdetails_1_svc:	Info: ChunkIndex = 69, Chunksize = 1024, Remain = 147296
+fetchdetails_1_svc:	Info: ChunkIndex = 70, Chunksize = 1024, Remain = 146272
+fetchdetails_1_svc:	Info: ChunkIndex = 71, Chunksize = 1024, Remain = 145248
+fetchdetails_1_svc:	Info: ChunkIndex = 72, Chunksize = 1024, Remain = 144224
+fetchdetails_1_svc:	Info: ChunkIndex = 73, Chunksize = 1024, Remain = 143200
+fetchdetails_1_svc:	Info: ChunkIndex = 74, Chunksize = 1024, Remain = 142176
+fetchdetails_1_svc:	Info: ChunkIndex = 75, Chunksize = 1024, Remain = 141152
+fetchdetails_1_svc:	Info: ChunkIndex = 76, Chunksize = 1024, Remain = 140128
+fetchdetails_1_svc:	Info: ChunkIndex = 77, Chunksize = 1024, Remain = 139104
+fetchdetails_1_svc:	Info: ChunkIndex = 78, Chunksize = 1024, Remain = 138080
+fetchdetails_1_svc:	Info: ChunkIndex = 79, Chunksize = 1024, Remain = 137056
+fetchdetails_1_svc:	Info: ChunkIndex = 80, Chunksize = 1024, Remain = 136032
+fetchdetails_1_svc:	Info: ChunkIndex = 81, Chunksize = 1024, Remain = 135008
+fetchdetails_1_svc:	Info: ChunkIndex = 82, Chunksize = 1024, Remain = 133984
+fetchdetails_1_svc:	Info: ChunkIndex = 83, Chunksize = 1024, Remain = 132960
+fetchdetails_1_svc:	Info: ChunkIndex = 84, Chunksize = 1024, Remain = 131936
+fetchdetails_1_svc:	Info: ChunkIndex = 85, Chunksize = 1024, Remain = 130912
+fetchdetails_1_svc:	Info: ChunkIndex = 86, Chunksize = 1024, Remain = 129888
+fetchdetails_1_svc:	Info: ChunkIndex = 87, Chunksize = 1024, Remain = 128864
+fetchdetails_1_svc:	Info: ChunkIndex = 88, Chunksize = 1024, Remain = 127840
+fetchdetails_1_svc:	Info: ChunkIndex = 89, Chunksize = 1024, Remain = 126816
+fetchdetails_1_svc:	Info: ChunkIndex = 90, Chunksize = 1024, Remain = 125792
+fetchdetails_1_svc:	Info: ChunkIndex = 91, Chunksize = 1024, Remain = 124768
+fetchdetails_1_svc:	Info: ChunkIndex = 92, Chunksize = 1024, Remain = 123744
+fetchdetails_1_svc:	Info: ChunkIndex = 93, Chunksize = 1024, Remain = 122720
+fetchdetails_1_svc:	Info: ChunkIndex = 94, Chunksize = 1024, Remain = 121696
+fetchdetails_1_svc:	Info: ChunkIndex = 95, Chunksize = 1024, Remain = 120672
+fetchdetails_1_svc:	Info: ChunkIndex = 96, Chunksize = 1024, Remain = 119648
+fetchdetails_1_svc:	Info: ChunkIndex = 97, Chunksize = 1024, Remain = 118624
+fetchdetails_1_svc:	Info: ChunkIndex = 98, Chunksize = 1024, Remain = 117600
+fetchdetails_1_svc:	Info: ChunkIndex = 99, Chunksize = 1024, Remain = 116576
+fetchdetails_1_svc:	Info: ChunkIndex = 100, Chunksize = 1024, Remain = 115552
+fetchdetails_1_svc:	Info: ChunkIndex = 101, Chunksize = 1024, Remain = 114528
+fetchdetails_1_svc:	Info: ChunkIndex = 102, Chunksize = 1024, Remain = 113504
+fetchdetails_1_svc:	Info: ChunkIndex = 103, Chunksize = 1024, Remain = 112480
+fetchdetails_1_svc:	Info: ChunkIndex = 104, Chunksize = 1024, Remain = 111456
+fetchdetails_1_svc:	Info: ChunkIndex = 105, Chunksize = 1024, Remain = 110432
+fetchdetails_1_svc:	Info: ChunkIndex = 106, Chunksize = 1024, Remain = 109408
+fetchdetails_1_svc:	Info: ChunkIndex = 107, Chunksize = 1024, Remain = 108384
+fetchdetails_1_svc:	Info: ChunkIndex = 108, Chunksize = 1024, Remain = 107360
+fetchdetails_1_svc:	Info: ChunkIndex = 109, Chunksize = 1024, Remain = 106336
+fetchdetails_1_svc:	Info: ChunkIndex = 110, Chunksize = 1024, Remain = 105312
+fetchdetails_1_svc:	Info: ChunkIndex = 111, Chunksize = 1024, Remain = 104288
+fetchdetails_1_svc:	Info: ChunkIndex = 112, Chunksize = 1024, Remain = 103264
+fetchdetails_1_svc:	Info: ChunkIndex = 113, Chunksize = 1024, Remain = 102240
+fetchdetails_1_svc:	Info: ChunkIndex = 114, Chunksize = 1024, Remain = 101216
+fetchdetails_1_svc:	Info: ChunkIndex = 115, Chunksize = 1024, Remain = 100192
+fetchdetails_1_svc:	Info: ChunkIndex = 116, Chunksize = 1024, Remain = 99168
+fetchdetails_1_svc:	Info: ChunkIndex = 117, Chunksize = 1024, Remain = 98144
+fetchdetails_1_svc:	Info: ChunkIndex = 118, Chunksize = 1024, Remain = 97120
+fetchdetails_1_svc:	Info: ChunkIndex = 119, Chunksize = 1024, Remain = 96096
+fetchdetails_1_svc:	Info: ChunkIndex = 120, Chunksize = 1024, Remain = 95072
+fetchdetails_1_svc:	Info: ChunkIndex = 121, Chunksize = 1024, Remain = 94048
+fetchdetails_1_svc:	Info: ChunkIndex = 122, Chunksize = 1024, Remain = 93024
+fetchdetails_1_svc:	Info: ChunkIndex = 123, Chunksize = 1024, Remain = 92000
+fetchdetails_1_svc:	Info: ChunkIndex = 124, Chunksize = 1024, Remain = 90976
+fetchdetails_1_svc:	Info: ChunkIndex = 125, Chunksize = 1024, Remain = 89952
+fetchdetails_1_svc:	Info: ChunkIndex = 126, Chunksize = 1024, Remain = 88928
+fetchdetails_1_svc:	Info: ChunkIndex = 127, Chunksize = 1024, Remain = 87904
+fetchdetails_1_svc:	Info: ChunkIndex = 128, Chunksize = 1024, Remain = 86880
+fetchdetails_1_svc:	Info: ChunkIndex = 129, Chunksize = 1024, Remain = 85856
+fetchdetails_1_svc:	Info: ChunkIndex = 130, Chunksize = 1024, Remain = 84832
+fetchdetails_1_svc:	Info: ChunkIndex = 131, Chunksize = 1024, Remain = 83808
+fetchdetails_1_svc:	Info: ChunkIndex = 132, Chunksize = 1024, Remain = 82784
+fetchdetails_1_svc:	Info: ChunkIndex = 133, Chunksize = 1024, Remain = 81760
+fetchdetails_1_svc:	Info: ChunkIndex = 134, Chunksize = 1024, Remain = 80736
+fetchdetails_1_svc:	Info: ChunkIndex = 135, Chunksize = 1024, Remain = 79712
+fetchdetails_1_svc:	Info: ChunkIndex = 136, Chunksize = 1024, Remain = 78688
+fetchdetails_1_svc:	Info: ChunkIndex = 137, Chunksize = 1024, Remain = 77664
+fetchdetails_1_svc:	Info: ChunkIndex = 138, Chunksize = 1024, Remain = 76640
+fetchdetails_1_svc:	Info: ChunkIndex = 139, Chunksize = 1024, Remain = 75616
+fetchdetails_1_svc:	Info: ChunkIndex = 140, Chunksize = 1024, Remain = 74592
+fetchdetails_1_svc:	Info: ChunkIndex = 141, Chunksize = 1024, Remain = 73568
+fetchdetails_1_svc:	Info: ChunkIndex = 142, Chunksize = 1024, Remain = 72544
+fetchdetails_1_svc:	Info: ChunkIndex = 143, Chunksize = 1024, Remain = 71520
+fetchdetails_1_svc:	Info: ChunkIndex = 144, Chunksize = 1024, Remain = 70496
+fetchdetails_1_svc:	Info: ChunkIndex = 145, Chunksize = 1024, Remain = 69472
+fetchdetails_1_svc:	Info: ChunkIndex = 146, Chunksize = 1024, Remain = 68448
+fetchdetails_1_svc:	Info: ChunkIndex = 147, Chunksize = 1024, Remain = 67424
+fetchdetails_1_svc:	Info: ChunkIndex = 148, Chunksize = 1024, Remain = 66400
+fetchdetails_1_svc:	Info: ChunkIndex = 149, Chunksize = 1024, Remain = 65376
+fetchdetails_1_svc:	Info: ChunkIndex = 150, Chunksize = 1024, Remain = 64352
+fetchdetails_1_svc:	Info: ChunkIndex = 151, Chunksize = 1024, Remain = 63328
+fetchdetails_1_svc:	Info: ChunkIndex = 152, Chunksize = 1024, Remain = 62304
+fetchdetails_1_svc:	Info: ChunkIndex = 153, Chunksize = 1024, Remain = 61280
+fetchdetails_1_svc:	Info: ChunkIndex = 154, Chunksize = 1024, Remain = 60256
+fetchdetails_1_svc:	Info: ChunkIndex = 155, Chunksize = 1024, Remain = 59232
+fetchdetails_1_svc:	Info: ChunkIndex = 156, Chunksize = 1024, Remain = 58208
+fetchdetails_1_svc:	Info: ChunkIndex = 157, Chunksize = 1024, Remain = 57184
+fetchdetails_1_svc:	Info: ChunkIndex = 158, Chunksize = 1024, Remain = 56160
+fetchdetails_1_svc:	Info: ChunkIndex = 159, Chunksize = 1024, Remain = 55136
+fetchdetails_1_svc:	Info: ChunkIndex = 160, Chunksize = 1024, Remain = 54112
+fetchdetails_1_svc:	Info: ChunkIndex = 161, Chunksize = 1024, Remain = 53088
+fetchdetails_1_svc:	Info: ChunkIndex = 162, Chunksize = 1024, Remain = 52064
+fetchdetails_1_svc:	Info: ChunkIndex = 163, Chunksize = 1024, Remain = 51040
+fetchdetails_1_svc:	Info: ChunkIndex = 164, Chunksize = 1024, Remain = 50016
+fetchdetails_1_svc:	Info: ChunkIndex = 165, Chunksize = 1024, Remain = 48992
+fetchdetails_1_svc:	Info: ChunkIndex = 166, Chunksize = 1024, Remain = 47968
+fetchdetails_1_svc:	Info: ChunkIndex = 167, Chunksize = 1024, Remain = 46944
+fetchdetails_1_svc:	Info: ChunkIndex = 168, Chunksize = 1024, Remain = 45920
+fetchdetails_1_svc:	Info: ChunkIndex = 169, Chunksize = 1024, Remain = 44896
+fetchdetails_1_svc:	Info: ChunkIndex = 170, Chunksize = 1024, Remain = 43872
+fetchdetails_1_svc:	Info: ChunkIndex = 171, Chunksize = 1024, Remain = 42848
+fetchdetails_1_svc:	Info: ChunkIndex = 172, Chunksize = 1024, Remain = 41824
+fetchdetails_1_svc:	Info: ChunkIndex = 173, Chunksize = 1024, Remain = 40800
+fetchdetails_1_svc:	Info: ChunkIndex = 174, Chunksize = 1024, Remain = 39776
+fetchdetails_1_svc:	Info: ChunkIndex = 175, Chunksize = 1024, Remain = 38752
+fetchdetails_1_svc:	Info: ChunkIndex = 176, Chunksize = 1024, Remain = 37728
+fetchdetails_1_svc:	Info: ChunkIndex = 177, Chunksize = 1024, Remain = 36704
+fetchdetails_1_svc:	Info: ChunkIndex = 178, Chunksize = 1024, Remain = 35680
+fetchdetails_1_svc:	Info: ChunkIndex = 179, Chunksize = 1024, Remain = 34656
+fetchdetails_1_svc:	Info: ChunkIndex = 180, Chunksize = 1024, Remain = 33632
+fetchdetails_1_svc:	Info: ChunkIndex = 181, Chunksize = 1024, Remain = 32608
+fetchdetails_1_svc:	Info: ChunkIndex = 182, Chunksize = 1024, Remain = 31584
+fetchdetails_1_svc:	Info: ChunkIndex = 183, Chunksize = 1024, Remain = 30560
+fetchdetails_1_svc:	Info: ChunkIndex = 184, Chunksize = 1024, Remain = 29536
+fetchdetails_1_svc:	Info: ChunkIndex = 185, Chunksize = 1024, Remain = 28512
+fetchdetails_1_svc:	Info: ChunkIndex = 186, Chunksize = 1024, Remain = 27488
+fetchdetails_1_svc:	Info: ChunkIndex = 187, Chunksize = 1024, Remain = 26464
+fetchdetails_1_svc:	Info: ChunkIndex = 188, Chunksize = 1024, Remain = 25440
+fetchdetails_1_svc:	Info: ChunkIndex = 189, Chunksize = 1024, Remain = 24416
+fetchdetails_1_svc:	Info: ChunkIndex = 190, Chunksize = 1024, Remain = 23392
+fetchdetails_1_svc:	Info: ChunkIndex = 191, Chunksize = 1024, Remain = 22368
+fetchdetails_1_svc:	Info: ChunkIndex = 192, Chunksize = 1024, Remain = 21344
+fetchdetails_1_svc:	Info: ChunkIndex = 193, Chunksize = 1024, Remain = 20320
+fetchdetails_1_svc:	Info: ChunkIndex = 194, Chunksize = 1024, Remain = 19296
+fetchdetails_1_svc:	Info: ChunkIndex = 195, Chunksize = 1024, Remain = 18272
+fetchdetails_1_svc:	Info: ChunkIndex = 196, Chunksize = 1024, Remain = 17248
+fetchdetails_1_svc:	Info: ChunkIndex = 197, Chunksize = 1024, Remain = 16224
+fetchdetails_1_svc:	Info: ChunkIndex = 198, Chunksize = 1024, Remain = 15200
+fetchdetails_1_svc:	Info: ChunkIndex = 199, Chunksize = 1024, Remain = 14176
+fetchdetails_1_svc:	Info: ChunkIndex = 200, Chunksize = 1024, Remain = 13152
+fetchdetails_1_svc:	Info: ChunkIndex = 201, Chunksize = 1024, Remain = 12128
+fetchdetails_1_svc:	Info: ChunkIndex = 202, Chunksize = 1024, Remain = 11104
+fetchdetails_1_svc:	Info: ChunkIndex = 203, Chunksize = 1024, Remain = 10080
+fetchdetails_1_svc:	Info: ChunkIndex = 204, Chunksize = 1024, Remain = 9056
+fetchdetails_1_svc:	Info: ChunkIndex = 205, Chunksize = 1024, Remain = 8032
+fetchdetails_1_svc:	Info: ChunkIndex = 206, Chunksize = 1024, Remain = 7008
+fetchdetails_1_svc:	Info: ChunkIndex = 207, Chunksize = 1024, Remain = 5984
+fetchdetails_1_svc:	Info: ChunkIndex = 208, Chunksize = 1024, Remain = 4960
+fetchdetails_1_svc:	Info: ChunkIndex = 209, Chunksize = 1024, Remain = 3936
+fetchdetails_1_svc:	Info: ChunkIndex = 210, Chunksize = 1024, Remain = 2912
+fetchdetails_1_svc:	Info: ChunkIndex = 211, Chunksize = 1024, Remain = 1888
+fetchdetails_1_svc:	Info: ChunkIndex = 212, Chunksize = 864, Remain = 864
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+senddetails_1_svc:	Info: Calling AddToList
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: ChunkIndex = 0, Chunksize = 1024, Remain = 217952
+fetchdetails_1_svc:	Info: ChunkIndex = 1, Chunksize = 1024, Remain = 216928
+fetchdetails_1_svc:	Info: ChunkIndex = 2, Chunksize = 1024, Remain = 215904
+fetchdetails_1_svc:	Info: ChunkIndex = 3, Chunksize = 1024, Remain = 214880
+fetchdetails_1_svc:	Info: ChunkIndex = 4, Chunksize = 1024, Remain = 213856
+fetchdetails_1_svc:	Info: ChunkIndex = 5, Chunksize = 1024, Remain = 212832
+fetchdetails_1_svc:	Info: ChunkIndex = 6, Chunksize = 1024, Remain = 211808
+fetchdetails_1_svc:	Info: ChunkIndex = 7, Chunksize = 1024, Remain = 210784
+fetchdetails_1_svc:	Info: ChunkIndex = 8, Chunksize = 1024, Remain = 209760
+fetchdetails_1_svc:	Info: ChunkIndex = 9, Chunksize = 1024, Remain = 208736
+fetchdetails_1_svc:	Info: ChunkIndex = 10, Chunksize = 1024, Remain = 207712
+fetchdetails_1_svc:	Info: ChunkIndex = 11, Chunksize = 1024, Remain = 206688
+fetchdetails_1_svc:	Info: ChunkIndex = 12, Chunksize = 1024, Remain = 205664
+fetchdetails_1_svc:	Info: ChunkIndex = 13, Chunksize = 1024, Remain = 204640
+fetchdetails_1_svc:	Info: ChunkIndex = 14, Chunksize = 1024, Remain = 203616
+fetchdetails_1_svc:	Info: ChunkIndex = 15, Chunksize = 1024, Remain = 202592
+fetchdetails_1_svc:	Info: ChunkIndex = 16, Chunksize = 1024, Remain = 201568
+fetchdetails_1_svc:	Info: ChunkIndex = 17, Chunksize = 1024, Remain = 200544
+fetchdetails_1_svc:	Info: ChunkIndex = 18, Chunksize = 1024, Remain = 199520
+fetchdetails_1_svc:	Info: ChunkIndex = 19, Chunksize = 1024, Remain = 198496
+fetchdetails_1_svc:	Info: ChunkIndex = 20, Chunksize = 1024, Remain = 197472
+fetchdetails_1_svc:	Info: ChunkIndex = 21, Chunksize = 1024, Remain = 196448
+fetchdetails_1_svc:	Info: ChunkIndex = 22, Chunksize = 1024, Remain = 195424
+fetchdetails_1_svc:	Info: ChunkIndex = 23, Chunksize = 1024, Remain = 194400
+fetchdetails_1_svc:	Info: ChunkIndex = 24, Chunksize = 1024, Remain = 193376
+fetchdetails_1_svc:	Info: ChunkIndex = 25, Chunksize = 1024, Remain = 192352
+fetchdetails_1_svc:	Info: ChunkIndex = 26, Chunksize = 1024, Remain = 191328
+fetchdetails_1_svc:	Info: ChunkIndex = 27, Chunksize = 1024, Remain = 190304
+fetchdetails_1_svc:	Info: ChunkIndex = 28, Chunksize = 1024, Remain = 189280
+fetchdetails_1_svc:	Info: ChunkIndex = 29, Chunksize = 1024, Remain = 188256
+fetchdetails_1_svc:	Info: ChunkIndex = 30, Chunksize = 1024, Remain = 187232
+fetchdetails_1_svc:	Info: ChunkIndex = 31, Chunksize = 1024, Remain = 186208
+fetchdetails_1_svc:	Info: ChunkIndex = 32, Chunksize = 1024, Remain = 185184
+fetchdetails_1_svc:	Info: ChunkIndex = 33, Chunksize = 1024, Remain = 184160
+fetchdetails_1_svc:	Info: ChunkIndex = 34, Chunksize = 1024, Remain = 183136
+fetchdetails_1_svc:	Info: ChunkIndex = 35, Chunksize = 1024, Remain = 182112
+fetchdetails_1_svc:	Info: ChunkIndex = 36, Chunksize = 1024, Remain = 181088
+fetchdetails_1_svc:	Info: ChunkIndex = 37, Chunksize = 1024, Remain = 180064
+fetchdetails_1_svc:	Info: ChunkIndex = 38, Chunksize = 1024, Remain = 179040
+fetchdetails_1_svc:	Info: ChunkIndex = 39, Chunksize = 1024, Remain = 178016
+fetchdetails_1_svc:	Info: ChunkIndex = 40, Chunksize = 1024, Remain = 176992
+fetchdetails_1_svc:	Info: ChunkIndex = 41, Chunksize = 1024, Remain = 175968
+fetchdetails_1_svc:	Info: ChunkIndex = 42, Chunksize = 1024, Remain = 174944
+fetchdetails_1_svc:	Info: ChunkIndex = 43, Chunksize = 1024, Remain = 173920
+fetchdetails_1_svc:	Info: ChunkIndex = 44, Chunksize = 1024, Remain = 172896
+fetchdetails_1_svc:	Info: ChunkIndex = 45, Chunksize = 1024, Remain = 171872
+fetchdetails_1_svc:	Info: ChunkIndex = 46, Chunksize = 1024, Remain = 170848
+fetchdetails_1_svc:	Info: ChunkIndex = 47, Chunksize = 1024, Remain = 169824
+fetchdetails_1_svc:	Info: ChunkIndex = 48, Chunksize = 1024, Remain = 168800
+fetchdetails_1_svc:	Info: ChunkIndex = 49, Chunksize = 1024, Remain = 167776
+fetchdetails_1_svc:	Info: ChunkIndex = 50, Chunksize = 1024, Remain = 166752
+fetchdetails_1_svc:	Info: ChunkIndex = 51, Chunksize = 1024, Remain = 165728
+fetchdetails_1_svc:	Info: ChunkIndex = 52, Chunksize = 1024, Remain = 164704
+fetchdetails_1_svc:	Info: ChunkIndex = 53, Chunksize = 1024, Remain = 163680
+fetchdetails_1_svc:	Info: ChunkIndex = 54, Chunksize = 1024, Remain = 162656
+fetchdetails_1_svc:	Info: ChunkIndex = 55, Chunksize = 1024, Remain = 161632
+fetchdetails_1_svc:	Info: ChunkIndex = 56, Chunksize = 1024, Remain = 160608
+fetchdetails_1_svc:	Info: ChunkIndex = 57, Chunksize = 1024, Remain = 159584
+fetchdetails_1_svc:	Info: ChunkIndex = 58, Chunksize = 1024, Remain = 158560
+fetchdetails_1_svc:	Info: ChunkIndex = 59, Chunksize = 1024, Remain = 157536
+fetchdetails_1_svc:	Info: ChunkIndex = 60, Chunksize = 1024, Remain = 156512
+fetchdetails_1_svc:	Info: ChunkIndex = 61, Chunksize = 1024, Remain = 155488
+fetchdetails_1_svc:	Info: ChunkIndex = 62, Chunksize = 1024, Remain = 154464
+fetchdetails_1_svc:	Info: ChunkIndex = 63, Chunksize = 1024, Remain = 153440
+fetchdetails_1_svc:	Info: ChunkIndex = 64, Chunksize = 1024, Remain = 152416
+fetchdetails_1_svc:	Info: ChunkIndex = 65, Chunksize = 1024, Remain = 151392
+fetchdetails_1_svc:	Info: ChunkIndex = 66, Chunksize = 1024, Remain = 150368
+fetchdetails_1_svc:	Info: ChunkIndex = 67, Chunksize = 1024, Remain = 149344
+fetchdetails_1_svc:	Info: ChunkIndex = 68, Chunksize = 1024, Remain = 148320
+fetchdetails_1_svc:	Info: ChunkIndex = 69, Chunksize = 1024, Remain = 147296
+fetchdetails_1_svc:	Info: ChunkIndex = 70, Chunksize = 1024, Remain = 146272
+fetchdetails_1_svc:	Info: ChunkIndex = 71, Chunksize = 1024, Remain = 145248
+fetchdetails_1_svc:	Info: ChunkIndex = 72, Chunksize = 1024, Remain = 144224
+fetchdetails_1_svc:	Info: ChunkIndex = 73, Chunksize = 1024, Remain = 143200
+fetchdetails_1_svc:	Info: ChunkIndex = 74, Chunksize = 1024, Remain = 142176
+fetchdetails_1_svc:	Info: ChunkIndex = 75, Chunksize = 1024, Remain = 141152
+fetchdetails_1_svc:	Info: ChunkIndex = 76, Chunksize = 1024, Remain = 140128
+fetchdetails_1_svc:	Info: ChunkIndex = 77, Chunksize = 1024, Remain = 139104
+fetchdetails_1_svc:	Info: ChunkIndex = 78, Chunksize = 1024, Remain = 138080
+fetchdetails_1_svc:	Info: ChunkIndex = 79, Chunksize = 1024, Remain = 137056
+fetchdetails_1_svc:	Info: ChunkIndex = 80, Chunksize = 1024, Remain = 136032
+fetchdetails_1_svc:	Info: ChunkIndex = 81, Chunksize = 1024, Remain = 135008
+fetchdetails_1_svc:	Info: ChunkIndex = 82, Chunksize = 1024, Remain = 133984
+fetchdetails_1_svc:	Info: ChunkIndex = 83, Chunksize = 1024, Remain = 132960
+fetchdetails_1_svc:	Info: ChunkIndex = 84, Chunksize = 1024, Remain = 131936
+fetchdetails_1_svc:	Info: ChunkIndex = 85, Chunksize = 1024, Remain = 130912
+fetchdetails_1_svc:	Info: ChunkIndex = 86, Chunksize = 1024, Remain = 129888
+fetchdetails_1_svc:	Info: ChunkIndex = 87, Chunksize = 1024, Remain = 128864
+fetchdetails_1_svc:	Info: ChunkIndex = 88, Chunksize = 1024, Remain = 127840
+fetchdetails_1_svc:	Info: ChunkIndex = 89, Chunksize = 1024, Remain = 126816
+fetchdetails_1_svc:	Info: ChunkIndex = 90, Chunksize = 1024, Remain = 125792
+fetchdetails_1_svc:	Info: ChunkIndex = 91, Chunksize = 1024, Remain = 124768
+fetchdetails_1_svc:	Info: ChunkIndex = 92, Chunksize = 1024, Remain = 123744
+fetchdetails_1_svc:	Info: ChunkIndex = 93, Chunksize = 1024, Remain = 122720
+fetchdetails_1_svc:	Info: ChunkIndex = 94, Chunksize = 1024, Remain = 121696
+fetchdetails_1_svc:	Info: ChunkIndex = 95, Chunksize = 1024, Remain = 120672
+fetchdetails_1_svc:	Info: ChunkIndex = 96, Chunksize = 1024, Remain = 119648
+fetchdetails_1_svc:	Info: ChunkIndex = 97, Chunksize = 1024, Remain = 118624
+fetchdetails_1_svc:	Info: ChunkIndex = 98, Chunksize = 1024, Remain = 117600
+fetchdetails_1_svc:	Info: ChunkIndex = 99, Chunksize = 1024, Remain = 116576
+fetchdetails_1_svc:	Info: ChunkIndex = 100, Chunksize = 1024, Remain = 115552
+fetchdetails_1_svc:	Info: ChunkIndex = 101, Chunksize = 1024, Remain = 114528
+fetchdetails_1_svc:	Info: ChunkIndex = 102, Chunksize = 1024, Remain = 113504
+fetchdetails_1_svc:	Info: ChunkIndex = 103, Chunksize = 1024, Remain = 112480
+fetchdetails_1_svc:	Info: ChunkIndex = 104, Chunksize = 1024, Remain = 111456
+fetchdetails_1_svc:	Info: ChunkIndex = 105, Chunksize = 1024, Remain = 110432
+fetchdetails_1_svc:	Info: ChunkIndex = 106, Chunksize = 1024, Remain = 109408
+fetchdetails_1_svc:	Info: ChunkIndex = 107, Chunksize = 1024, Remain = 108384
+fetchdetails_1_svc:	Info: ChunkIndex = 108, Chunksize = 1024, Remain = 107360
+fetchdetails_1_svc:	Info: ChunkIndex = 109, Chunksize = 1024, Remain = 106336
+fetchdetails_1_svc:	Info: ChunkIndex = 110, Chunksize = 1024, Remain = 105312
+fetchdetails_1_svc:	Info: ChunkIndex = 111, Chunksize = 1024, Remain = 104288
+fetchdetails_1_svc:	Info: ChunkIndex = 112, Chunksize = 1024, Remain = 103264
+fetchdetails_1_svc:	Info: ChunkIndex = 113, Chunksize = 1024, Remain = 102240
+fetchdetails_1_svc:	Info: ChunkIndex = 114, Chunksize = 1024, Remain = 101216
+fetchdetails_1_svc:	Info: ChunkIndex = 115, Chunksize = 1024, Remain = 100192
+fetchdetails_1_svc:	Info: ChunkIndex = 116, Chunksize = 1024, Remain = 99168
+fetchdetails_1_svc:	Info: ChunkIndex = 117, Chunksize = 1024, Remain = 98144
+fetchdetails_1_svc:	Info: ChunkIndex = 118, Chunksize = 1024, Remain = 97120
+fetchdetails_1_svc:	Info: ChunkIndex = 119, Chunksize = 1024, Remain = 96096
+fetchdetails_1_svc:	Info: ChunkIndex = 120, Chunksize = 1024, Remain = 95072
+fetchdetails_1_svc:	Info: ChunkIndex = 121, Chunksize = 1024, Remain = 94048
+fetchdetails_1_svc:	Info: ChunkIndex = 122, Chunksize = 1024, Remain = 93024
+fetchdetails_1_svc:	Info: ChunkIndex = 123, Chunksize = 1024, Remain = 92000
+fetchdetails_1_svc:	Info: ChunkIndex = 124, Chunksize = 1024, Remain = 90976
+fetchdetails_1_svc:	Info: ChunkIndex = 125, Chunksize = 1024, Remain = 89952
+fetchdetails_1_svc:	Info: ChunkIndex = 126, Chunksize = 1024, Remain = 88928
+fetchdetails_1_svc:	Info: ChunkIndex = 127, Chunksize = 1024, Remain = 87904
+fetchdetails_1_svc:	Info: ChunkIndex = 128, Chunksize = 1024, Remain = 86880
+fetchdetails_1_svc:	Info: ChunkIndex = 129, Chunksize = 1024, Remain = 85856
+fetchdetails_1_svc:	Info: ChunkIndex = 130, Chunksize = 1024, Remain = 84832
+fetchdetails_1_svc:	Info: ChunkIndex = 131, Chunksize = 1024, Remain = 83808
+fetchdetails_1_svc:	Info: ChunkIndex = 132, Chunksize = 1024, Remain = 82784
+fetchdetails_1_svc:	Info: ChunkIndex = 133, Chunksize = 1024, Remain = 81760
+fetchdetails_1_svc:	Info: ChunkIndex = 134, Chunksize = 1024, Remain = 80736
+fetchdetails_1_svc:	Info: ChunkIndex = 135, Chunksize = 1024, Remain = 79712
+fetchdetails_1_svc:	Info: ChunkIndex = 136, Chunksize = 1024, Remain = 78688
+fetchdetails_1_svc:	Info: ChunkIndex = 137, Chunksize = 1024, Remain = 77664
+fetchdetails_1_svc:	Info: ChunkIndex = 138, Chunksize = 1024, Remain = 76640
+fetchdetails_1_svc:	Info: ChunkIndex = 139, Chunksize = 1024, Remain = 75616
+fetchdetails_1_svc:	Info: ChunkIndex = 140, Chunksize = 1024, Remain = 74592
+fetchdetails_1_svc:	Info: ChunkIndex = 141, Chunksize = 1024, Remain = 73568
+fetchdetails_1_svc:	Info: ChunkIndex = 142, Chunksize = 1024, Remain = 72544
+fetchdetails_1_svc:	Info: ChunkIndex = 143, Chunksize = 1024, Remain = 71520
+fetchdetails_1_svc:	Info: ChunkIndex = 144, Chunksize = 1024, Remain = 70496
+fetchdetails_1_svc:	Info: ChunkIndex = 145, Chunksize = 1024, Remain = 69472
+fetchdetails_1_svc:	Info: ChunkIndex = 146, Chunksize = 1024, Remain = 68448
+fetchdetails_1_svc:	Info: ChunkIndex = 147, Chunksize = 1024, Remain = 67424
+fetchdetails_1_svc:	Info: ChunkIndex = 148, Chunksize = 1024, Remain = 66400
+fetchdetails_1_svc:	Info: ChunkIndex = 149, Chunksize = 1024, Remain = 65376
+fetchdetails_1_svc:	Info: ChunkIndex = 150, Chunksize = 1024, Remain = 64352
+fetchdetails_1_svc:	Info: ChunkIndex = 151, Chunksize = 1024, Remain = 63328
+fetchdetails_1_svc:	Info: ChunkIndex = 152, Chunksize = 1024, Remain = 62304
+fetchdetails_1_svc:	Info: ChunkIndex = 153, Chunksize = 1024, Remain = 61280
+fetchdetails_1_svc:	Info: ChunkIndex = 154, Chunksize = 1024, Remain = 60256
+fetchdetails_1_svc:	Info: ChunkIndex = 155, Chunksize = 1024, Remain = 59232
+fetchdetails_1_svc:	Info: ChunkIndex = 156, Chunksize = 1024, Remain = 58208
+fetchdetails_1_svc:	Info: ChunkIndex = 157, Chunksize = 1024, Remain = 57184
+fetchdetails_1_svc:	Info: ChunkIndex = 158, Chunksize = 1024, Remain = 56160
+fetchdetails_1_svc:	Info: ChunkIndex = 159, Chunksize = 1024, Remain = 55136
+fetchdetails_1_svc:	Info: ChunkIndex = 160, Chunksize = 1024, Remain = 54112
+fetchdetails_1_svc:	Info: ChunkIndex = 161, Chunksize = 1024, Remain = 53088
+fetchdetails_1_svc:	Info: ChunkIndex = 162, Chunksize = 1024, Remain = 52064
+fetchdetails_1_svc:	Info: ChunkIndex = 163, Chunksize = 1024, Remain = 51040
+fetchdetails_1_svc:	Info: ChunkIndex = 164, Chunksize = 1024, Remain = 50016
+fetchdetails_1_svc:	Info: ChunkIndex = 165, Chunksize = 1024, Remain = 48992
+fetchdetails_1_svc:	Info: ChunkIndex = 166, Chunksize = 1024, Remain = 47968
+fetchdetails_1_svc:	Info: ChunkIndex = 167, Chunksize = 1024, Remain = 46944
+fetchdetails_1_svc:	Info: ChunkIndex = 168, Chunksize = 1024, Remain = 45920
+fetchdetails_1_svc:	Info: ChunkIndex = 169, Chunksize = 1024, Remain = 44896
+fetchdetails_1_svc:	Info: ChunkIndex = 170, Chunksize = 1024, Remain = 43872
+fetchdetails_1_svc:	Info: ChunkIndex = 171, Chunksize = 1024, Remain = 42848
+fetchdetails_1_svc:	Info: ChunkIndex = 172, Chunksize = 1024, Remain = 41824
+fetchdetails_1_svc:	Info: ChunkIndex = 173, Chunksize = 1024, Remain = 40800
+fetchdetails_1_svc:	Info: ChunkIndex = 174, Chunksize = 1024, Remain = 39776
+fetchdetails_1_svc:	Info: ChunkIndex = 175, Chunksize = 1024, Remain = 38752
+fetchdetails_1_svc:	Info: ChunkIndex = 176, Chunksize = 1024, Remain = 37728
+fetchdetails_1_svc:	Info: ChunkIndex = 177, Chunksize = 1024, Remain = 36704
+fetchdetails_1_svc:	Info: ChunkIndex = 178, Chunksize = 1024, Remain = 35680
+fetchdetails_1_svc:	Info: ChunkIndex = 179, Chunksize = 1024, Remain = 34656
+fetchdetails_1_svc:	Info: ChunkIndex = 180, Chunksize = 1024, Remain = 33632
+fetchdetails_1_svc:	Info: ChunkIndex = 181, Chunksize = 1024, Remain = 32608
+fetchdetails_1_svc:	Info: ChunkIndex = 182, Chunksize = 1024, Remain = 31584
+fetchdetails_1_svc:	Info: ChunkIndex = 183, Chunksize = 1024, Remain = 30560
+fetchdetails_1_svc:	Info: ChunkIndex = 184, Chunksize = 1024, Remain = 29536
+fetchdetails_1_svc:	Info: ChunkIndex = 185, Chunksize = 1024, Remain = 28512
+fetchdetails_1_svc:	Info: ChunkIndex = 186, Chunksize = 1024, Remain = 27488
+fetchdetails_1_svc:	Info: ChunkIndex = 187, Chunksize = 1024, Remain = 26464
+fetchdetails_1_svc:	Info: ChunkIndex = 188, Chunksize = 1024, Remain = 25440
+fetchdetails_1_svc:	Info: ChunkIndex = 189, Chunksize = 1024, Remain = 24416
+fetchdetails_1_svc:	Info: ChunkIndex = 190, Chunksize = 1024, Remain = 23392
+fetchdetails_1_svc:	Info: ChunkIndex = 191, Chunksize = 1024, Remain = 22368
+fetchdetails_1_svc:	Info: ChunkIndex = 192, Chunksize = 1024, Remain = 21344
+fetchdetails_1_svc:	Info: ChunkIndex = 193, Chunksize = 1024, Remain = 20320
+fetchdetails_1_svc:	Info: ChunkIndex = 194, Chunksize = 1024, Remain = 19296
+fetchdetails_1_svc:	Info: ChunkIndex = 195, Chunksize = 1024, Remain = 18272
+fetchdetails_1_svc:	Info: ChunkIndex = 196, Chunksize = 1024, Remain = 17248
+fetchdetails_1_svc:	Info: ChunkIndex = 197, Chunksize = 1024, Remain = 16224
+fetchdetails_1_svc:	Info: ChunkIndex = 198, Chunksize = 1024, Remain = 15200
+fetchdetails_1_svc:	Info: ChunkIndex = 199, Chunksize = 1024, Remain = 14176
+fetchdetails_1_svc:	Info: ChunkIndex = 200, Chunksize = 1024, Remain = 13152
+fetchdetails_1_svc:	Info: ChunkIndex = 201, Chunksize = 1024, Remain = 12128
+fetchdetails_1_svc:	Info: ChunkIndex = 202, Chunksize = 1024, Remain = 11104
+fetchdetails_1_svc:	Info: ChunkIndex = 203, Chunksize = 1024, Remain = 10080
+fetchdetails_1_svc:	Info: ChunkIndex = 204, Chunksize = 1024, Remain = 9056
+fetchdetails_1_svc:	Info: ChunkIndex = 205, Chunksize = 1024, Remain = 8032
+fetchdetails_1_svc:	Info: ChunkIndex = 206, Chunksize = 1024, Remain = 7008
+fetchdetails_1_svc:	Info: ChunkIndex = 207, Chunksize = 1024, Remain = 5984
+fetchdetails_1_svc:	Info: ChunkIndex = 208, Chunksize = 1024, Remain = 4960
+fetchdetails_1_svc:	Info: ChunkIndex = 209, Chunksize = 1024, Remain = 3936
+fetchdetails_1_svc:	Info: ChunkIndex = 210, Chunksize = 1024, Remain = 2912
+fetchdetails_1_svc:	Info: ChunkIndex = 211, Chunksize = 1024, Remain = 1888
+fetchdetails_1_svc:	Info: ChunkIndex = 212, Chunksize = 864, Remain = 864
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: copying
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
+fetchdetails_1_svc:	Info: siFirstTime...
+fetchdetails_1_svc:	Info: pNavigate NULL !
