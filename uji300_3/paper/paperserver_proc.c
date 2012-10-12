@@ -165,27 +165,32 @@ PAPER* fetchinfo_1_svc(int *piPaperIndex, struct svc_req *req)
   return &Paper;
 }
 
+/*
 
-PAPER* fetchdetails_1_svc(int *piPaperIndex, struct svc_req *req)
+*/
+PAPER* fetchdetails_1_svc(FILEINFO *pFileInfo, struct svc_req *req)
 {
   char chFound;
-  int iPaperIndex;
   char szLogBuffer[MAX_BUF];
   SERVER_PAPER_LIST *pNavigate;
 
   static PAPER Paper;
   memset(&Paper, 0, sizeof(Paper));
 
-  static int iChunkIndex = 0;
-  static long lRemainingBytes;
+  int iPaperIndex;
+  int iChunkIndex;
+  long lRemainingSize;
 
-  if(NULL == piPaperIndex)
+  if(NULL == pFileInfo)
   {
     chFound = 'n';
   }
   else
   {
-    iPaperIndex = *piPaperIndex;
+    iPaperIndex = pFileInfo->iPaperIndex;
+    iChunkIndex = pFileInfo->iChunkIndex;
+    lRemainingSize = pFileInfo->lRemainingSize;
+
     pNavigate = pPaperListHead;
     chFound = 'n';
 
@@ -199,32 +204,20 @@ PAPER* fetchdetails_1_svc(int *piPaperIndex, struct svc_req *req)
         strcpy(Paper.szPaperTitle, pNavigate->Data.szPaperTitle);
         Paper.lFileSize = pNavigate->Data.lFileSize;
 
-        if (0 == iChunkIndex)
-        {
-          lRemainingBytes = pNavigate->Data.lFileSize;      
-        }
-        else
-        {
-          lRemainingBytes -= MIN(MAX_BUF, lRemainingBytes);
-        }
+	//
+	// If it is first chunk, client does not know about file size
+	// so we must read min (1024, file_Size), as
+	// file size can be < 1024
+	//
+	if (0 == iChunkIndex)
+         Paper.lChunkSize = MIN(MAX_BUF, pNavigate->Data.lFileSize);
+	else
+	 Paper.lChunkSize = MIN(MAX_BUF, lRemainingSize);
 
-        if (0L == lRemainingBytes)
-        {
-          Paper.iChunkIndex = -1;
-          //
-          // Next call to fetch must start with chunk '0'
-          //
-          iChunkIndex = 0;
-          break;
-        }
-
-        Paper.lChunkSize = MIN(MAX_BUF, lRemainingBytes);
-
-        sprintf(szLogBuffer, "ChunkIndex = %d, Chunksize = %d, Remain = %d", iChunkIndex, Paper.lChunkSize,lRemainingBytes);
+        sprintf(szLogBuffer, "ChunkIndex = %d, Chunksize = %ld, Remain = %ld", iChunkIndex, Paper.lChunkSize, lRemainingSize);
         Log(SERVER_LOG_FILE, szLogBuffer, "fetchdetails_1_svc", LOGLEVEL_INFO, NULL);
 
-        memcpy(Paper.ByteFileChunk, pNavigate->Data.pFileData + (iChunkIndex * (MAX_BUF)), MIN(MAX_BUF, lRemainingBytes));
-        ++iChunkIndex;
+	memcpy(Paper.ByteFileChunk, pNavigate->Data.pFileData + (iChunkIndex * (MAX_BUF)), Paper.lChunkSize);
         break;
       }
 
@@ -251,50 +244,37 @@ PAPER* fetchdetails_1_svc(int *piPaperIndex, struct svc_req *req)
 }
 
 
-PAPER* fetchlist_1_svc(void *pVoid, struct svc_req *req)
+PAPER* fetchlist_1_svc(int *pithElement, struct svc_req *req)
 {
-  int iPaperIndex;
-  char szLogBuffer[MAX_BUF];
-
-  static short int siFirstTime = 0;
-  static SERVER_PAPER_LIST *pNavigate;
+  int iLoop;
+  int iTimesJump;
+  SERVER_PAPER_LIST *pNavigate;
 
   static PAPER Paper;
-  //
-  // This memset is crucial.
-  // Otherwise this function is NOT idempotent!
-  //
   memset(&Paper, 0, sizeof(Paper));
 
-  if (0 == siFirstTime)
-  {
-    Log(SERVER_LOG_FILE, "siFirstTime...", "fetchdetails_1_svc", LOGLEVEL_INFO, NULL);
-    pNavigate = pPaperListHead;
-    ++siFirstTime;
-  }
+  iTimesJump = (*pithElement) - 1;
 
-  //
-  // If current node is the last one
-  // then indicate so
-  //
-  if (NULL == pNavigate)
+  pNavigate = pPaperListHead;
+
+  for (iLoop = 1; iLoop <= iTimesJump; ++iLoop)
   {
-    Log(SERVER_LOG_FILE, "pNavigate NULL !", "fetchdetails_1_svc", LOGLEVEL_INFO, NULL);
-    Paper.iChunkIndex = -1;
-    siFirstTime = 0;
-  }
-  else
-  {
-    Log(SERVER_LOG_FILE, "copying", "fetchdetails_1_svc", LOGLEVEL_INFO, NULL);
-    Paper.iPaperNo = pNavigate->Data.iPaperIndex;
-    strcpy(Paper.szAuthors, pNavigate->Data.szAuthors[0]);
-    strcpy(Paper.szPaperTitle, pNavigate->Data.szPaperTitle);
+    if (NULL == pNavigate)
+      break;
 
     pNavigate = pNavigate->pNext;
   }
 
+  if (NULL != pNavigate)
+  {
+    Paper.iPaperNo = pNavigate->Data.iPaperIndex;
+    strcpy(Paper.szAuthors, pNavigate->Data.szAuthors[0]);
+    strcpy(Paper.szPaperTitle, pNavigate->Data.szPaperTitle);
+  }
+
   return &Paper;
 }
+
 
 int* removedetails_1_svc(int *piPaperIndex, struct svc_req *req)
 {

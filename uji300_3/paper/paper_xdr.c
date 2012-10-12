@@ -32,3 +32,17 @@ xdr_PAPER (XDR *xdrs, PAPER *objp)
 		 return FALSE;
 	return TRUE;
 }
+
+bool_t
+xdr_FILEINFO (XDR *xdrs, FILEINFO *objp)
+{
+	register int32_t *buf;
+
+	 if (!xdr_int (xdrs, &objp->iPaperIndex))
+		 return FALSE;
+	 if (!xdr_int (xdrs, &objp->iChunkIndex))
+		 return FALSE;
+	 if (!xdr_long (xdrs, &objp->lRemainingSize))
+		 return FALSE;
+	return TRUE;
+}

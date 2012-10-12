@@ -32,6 +32,14 @@ struct PAPER {
 typedef struct PAPER PAPER;
 
 
+struct FILEINFO {
+	int iPaperIndex;
+	int iChunkIndex;
+	long lRemainingSize;
+};
+typedef struct FILEINFO FILEINFO;
+
+
 #define PAPER_STORAGE_SERVER 0x20000001
 #define VERSION1 1
 
@@ -43,11 +51,11 @@ extern  int * senddetails_1_svc(PAPER *, struct svc_req *);
 extern  PAPER * fetchinfo_1(int *, CLIENT *);
 extern  PAPER * fetchinfo_1_svc(int *, struct svc_req *);
 #define FetchDetails 3
-extern  PAPER * fetchdetails_1(int *, CLIENT *);
-extern  PAPER * fetchdetails_1_svc(int *, struct svc_req *);
+extern  PAPER * fetchdetails_1(FILEINFO *, CLIENT *);
+extern  PAPER * fetchdetails_1_svc(FILEINFO *, struct svc_req *);
 #define FetchList 4
-extern  PAPER * fetchlist_1(void *, CLIENT *);
-extern  PAPER * fetchlist_1_svc(void *, struct svc_req *);
+extern  PAPER * fetchlist_1(int *, CLIENT *);
+extern  PAPER * fetchlist_1_svc(int *, struct svc_req *);
 #define RemoveDetails 5
 extern  int * removedetails_1(int *, CLIENT *);
 extern  int * removedetails_1_svc(int *, struct svc_req *);
@@ -77,10 +85,14 @@ extern int paper_storage_server_1_freeresult ();
 #if defined(__STDC__) || defined(__cplusplus)
 extern  bool_t xdr_PAPER (XDR *, PAPER*);
 extern  bool_t xdr_PAPER (XDR *, PAPER*);
+extern  bool_t xdr_FILEINFO (XDR *, FILEINFO*);
+extern  bool_t xdr_FILEINFO (XDR *, FILEINFO*);
 
 #else /* K&R C */
 extern bool_t xdr_PAPER ();
 extern bool_t xdr_PAPER ();
+extern bool_t xdr_FILEINFO ();
+extern bool_t xdr_FILEINFO ();
 
 #endif /* K&R C */
 

@@ -40,13 +40,13 @@ fetchinfo_1(int *argp, CLIENT *clnt)
 }
 
 PAPER *
-fetchdetails_1(int *argp, CLIENT *clnt)
+fetchdetails_1(FILEINFO *argp, CLIENT *clnt)
 {
 	static PAPER clnt_res;
 
 	memset((char *)&clnt_res, 0, sizeof(clnt_res));
 	if (clnt_call (clnt, FetchDetails,
-		(xdrproc_t) xdr_int, (caddr_t) argp,
+		(xdrproc_t) xdr_FILEINFO, (caddr_t) argp,
 		(xdrproc_t) xdr_PAPER, (caddr_t) &clnt_res,
 		TIMEOUT) != RPC_SUCCESS) {
 		return (NULL);
@@ -55,13 +55,13 @@ fetchdetails_1(int *argp, CLIENT *clnt)
 }
 
 PAPER *
-fetchlist_1(void *argp, CLIENT *clnt)
+fetchlist_1(int *argp, CLIENT *clnt)
 {
 	static PAPER clnt_res;
 
 	memset((char *)&clnt_res, 0, sizeof(clnt_res));
 	if (clnt_call (clnt, FetchList,
-		(xdrproc_t) xdr_void, (caddr_t) argp,
+		(xdrproc_t) xdr_int, (caddr_t) argp,
 		(xdrproc_t) xdr_PAPER, (caddr_t) &clnt_res,
 		TIMEOUT) != RPC_SUCCESS) {
 		return (NULL);

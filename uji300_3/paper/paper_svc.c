@@ -22,7 +22,8 @@ paper_storage_server_1(struct svc_req *rqstp, register SVCXPRT *transp)
 	union {
 		PAPER senddetails_1_arg;
 		int fetchinfo_1_arg;
-		int fetchdetails_1_arg;
+		FILEINFO fetchdetails_1_arg;
+		int fetchlist_1_arg;
 		int removedetails_1_arg;
 	} argument;
 	char *result;
@@ -47,13 +48,13 @@ paper_storage_server_1(struct svc_req *rqstp, register SVCXPRT *transp)
 		break;
 
 	case FetchDetails:
-		_xdr_argument = (xdrproc_t) xdr_int;
+		_xdr_argument = (xdrproc_t) xdr_FILEINFO;
 		_xdr_result = (xdrproc_t) xdr_PAPER;
 		local = (char *(*)(char *, struct svc_req *)) fetchdetails_1_svc;
 		break;
 
 	case FetchList:
-		_xdr_argument = (xdrproc_t) xdr_void;
+		_xdr_argument = (xdrproc_t) xdr_int;
 		_xdr_result = (xdrproc_t) xdr_PAPER;
 		local = (char *(*)(char *, struct svc_req *)) fetchlist_1_svc;
 		break;

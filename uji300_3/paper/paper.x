@@ -43,14 +43,23 @@ struct PAPER
 
 typedef struct PAPER PAPER;
 
+struct FILEINFO
+{
+  int iPaperIndex;
+  int iChunkIndex;
+  long lRemainingSize;
+};
+
+typedef struct FILEINFO FILEINFO;
+
 program PAPER_STORAGE_SERVER
 {
   version VERSION1
   {
     int SendDetails(PAPER *) = 1;
     PAPER FetchInfo(int) = 2; /* I wonder this declares function which returns PAPER* after rpcgen */
-    PAPER FetchDetails(int) = 3;
-    PAPER FetchList() = 4;
+    PAPER FetchDetails(FILEINFO *) = 3;
+    PAPER FetchList(int) = 4;
     int RemoveDetails(int) = 5;
 
   } = 1;

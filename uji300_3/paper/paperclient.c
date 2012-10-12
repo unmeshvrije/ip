@@ -43,6 +43,8 @@ Revision History:
 #include <sys/io.h>
 #include <string.h>
 
+#include <unistd.h>
+
 
 /////////////////////////////////////////////////////////////////////
 //	M A C R O S.
@@ -154,9 +156,22 @@ int FetchDetailsInternal(int *piIndex, CLIENT *pClient)
   PAPER *pPaper;
   char szLogBuffer[MAX_BUF];
 
+  int iChunkIndex = 0;
+  long lRemainingSize = -1;
+
+  FILEINFO FileInfo;
+  memset(&FileInfo, 0, sizeof(FileInfo));
+  FileInfo.iPaperIndex = *piIndex;
+
   while (1)
   {
-    pPaper = fetchdetails_1(piIndex, pClient);
+    //
+    // By default, client asks for MAX_BUF bytes each time
+    //
+    FileInfo.iChunkIndex = iChunkIndex;
+    FileInfo.lRemainingSize = lRemainingSize;
+
+    pPaper = fetchdetails_1(&FileInfo, pClient);
 
     if (NULL == pPaper)
     {
@@ -164,16 +179,27 @@ int FetchDetailsInternal(int *piIndex, CLIENT *pClient)
     }
     else
     {
-      sprintf(szLogBuffer, "lChunkSize = %d", pPaper->lChunkSize);
+      sprintf(szLogBuffer, "lChunkSize = %ld", pPaper->lChunkSize);
       Log(CLIENT_LOG_FILE, szLogBuffer, "FetchDetailsInternal", LOGLEVEL_INFO, NULL);
-
-      if (-1 == pPaper->iChunkIndex)
-      {
-        break;
-      }
 
       for (iLoop = 0; iLoop < pPaper->lChunkSize; ++iLoop)
         printf("%c", pPaper->ByteFileChunk[iLoop]);
+
+      sleep(5);
+      if (0 == iChunkIndex)
+      {
+        lRemainingSize = pPaper->lFileSize - pPaper->lChunkSize;
+      }
+      else
+      {
+        lRemainingSize -= pPaper->lChunkSize;
+      }
+
+      if (0 >= lRemainingSize)
+      {
+        break;
+      }
+      ++iChunkIndex;
     }
   }
 }
@@ -202,13 +228,33 @@ int FetchInfoInternal(int *piIndex, CLIENT *pClient)
 
 int FetchListInternal(CLIENT *pClient)
 {
-  int iLoop;
+  int iIndex;
   PAPER *pPaper;
   char szLogBuffer[MAX_BUF];
 
+  //
+  // Start asking records from 1
+  // Note that this is NOT same as asking for Paper having index 1
+  //
+  // Ill:
+  //	We have added 5 records (indexes: 1-5 given by server)
+  //	Then we delete these 5
+  //	Again if we add 	(server will give indexes 6,7)
+  //	So we should list 6th PAPER record and
+  //			  7th PAPER record
+  //	Thus, Starting from index 1 means, 1st record in server's
+  //	Linked list.
+  //
+  //	Ordering has to be maintained by client so as to have
+  //	correct behavior, when running MULTIPLE clients CONCURRENTLY.
+  //
+  iIndex = 1;
   while (1)
   {
-    pPaper = fetchlist_1(NULL, pClient);
+    //
+    // Simply call the FetchInfo for each record
+    //
+    pPaper = fetchlist_1(&iIndex, pClient);
 
     if (NULL == pPaper)
     {
@@ -216,13 +262,15 @@ int FetchListInternal(CLIENT *pClient)
       break;
     }
 
-    if (-1 == pPaper->iChunkIndex)
+    sleep(5);
+    if (0 == pPaper->iPaperNo)
     {
-      Log(CLIENT_LOG_FILE, "breaking", "FetchListInternal", LOGLEVEL_INFO, NULL);
+      Log(CLIENT_LOG_FILE, "Got 0 PaperNo", "FetchListInternal", LOGLEVEL_INFO, NULL);
       break;
     }
 
     printf("%d\t%s\t%s\n", pPaper->iPaperNo, pPaper->szAuthors, pPaper->szPaperTitle);
+    ++iIndex;
   }
 }
 
