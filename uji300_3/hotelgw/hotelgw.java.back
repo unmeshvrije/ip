@@ -1,0 +1,43 @@
+import java.lang.*;
+import java.io.*;
+import java.net.*;
+
+class Server {
+
+   //private long serverSocket = 9999;
+
+   public static void main(String args[]) {
+
+      String data = "Toobie ornaught toobieJust like that\0";
+      try {
+         ServerSocket srvr = new ServerSocket(9999);
+         Socket skt = srvr.accept();
+         System.out.print("Server has connected!\n");
+
+         BufferedReader in = new BufferedReader(new InputStreamReader(skt.getInputStream()));
+
+         boolean more = true;
+         while (more)
+         {
+            String line = in.readLine();
+            if (line == null)
+               more = false;
+            else
+               System.out.println(line);
+         }
+
+         System.out.println("Out of while..");
+         PrintWriter out = new PrintWriter(skt.getOutputStream(), true);
+         System.out.print("Sending string: '" + data + "\n");
+         out.print(data);
+         out.close();   // Flushes the buffer, it seems
+
+         skt.close();
+         srvr.close();
+      }
+      catch(Exception e) {
+         e.printStackTrace(); 
+         System.out.print("Whoops! It didn't work!\n");
+      }
+   }
+}
