@@ -180,6 +180,28 @@ FreeList(
 }
 
 
+SERVER_PAPER_LIST *
+GetNodeFromList(
+	SERVER_PAPER_LIST *pListHead,
+	int iPaperIndex
+	)
+{
+  SERVER_PAPER_LIST *pNavigate;
+
+  pNavigate = pListHead;
+  while (NULL != pNavigate)
+  {
+    if (pNavigate->Data.iPaperIndex == iPaperIndex)
+    {
+      return pNavigate;
+    }
+    pNavigate = pNavigate->pNext;
+  }
+
+  return NULL;
+}
+
+
 //*******************************************************************
 //
 //	Function:
@@ -220,10 +242,11 @@ int RemoveFromList(int iIndex,	SERVER_PAPER_LIST **ppListHead,	SERVER_PAPER_LIST
 	      }
 	      else if (*ppListTail == pNavigate)
 	      {
-	        //
+	        	//
 			// Deleting last node: Adjust tail
 			//
 			*ppListTail = pFollow;
+			(*ppListTail)->pNext = NULL;
 	      }
 	      else
 	      {

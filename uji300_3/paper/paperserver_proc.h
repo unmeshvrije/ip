@@ -39,7 +39,7 @@ Revision History:
 typedef struct tagSERVER_PAPER
 {
   int 		iPaperIndex;
-  char		szAuthors[MAX_AUTHORS][MAX_AUTHOR_NAME];
+  char		szAuthors[MAX_AUTHOR_NAME];
   char		szPaperTitle[MAX_PAPER_NAME];
   BYTE*		pFileData;
   long		lFileSize;

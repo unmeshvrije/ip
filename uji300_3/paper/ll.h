@@ -127,6 +127,7 @@ FreeList(
 	);
 
 
+SERVER_PAPER_LIST * GetNodeFromList(SERVER_PAPER_LIST *pHead, int);
 int RemoveFromList(int iIndex, SERVER_PAPER_LIST **ppListHead,	SERVER_PAPER_LIST **ppListTail);
 
 #endif	//_LL_H_

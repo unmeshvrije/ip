@@ -86,6 +86,7 @@ int SendDetailsInternal(PAPER *pPaper, CLIENT *pClient)
   int iRead;
   int *piIndex;
   int iChunkIndex;
+  int iServerIndex;
 
   iFd = open(pPaper->szFileName, O_RDONLY);
   if (-1 == iFd)
@@ -95,14 +96,10 @@ int SendDetailsInternal(PAPER *pPaper, CLIENT *pClient)
 
   pPaper->lFileSize = lseek(iFd, 0L, SEEK_END);
   pPaper->iChunkIndex = 0;
-  printf("Reading file of size = %ld", pPaper->lFileSize);
-  printf("Reading  = %s", pPaper->szAuthors);
-  printf("Reading  = %s", pPaper->szPaperTitle);
-  printf("Reading  = %s", pPaper->szFileName);
-  getchar();
   lseek(iFd, 0, SEEK_SET);
 
   
+  iServerIndex = -1;
   //
   // Prepare entire node here and send, so that
   // server's job is just to add the node to his list
@@ -125,25 +122,20 @@ int SendDetailsInternal(PAPER *pPaper, CLIENT *pClient)
     piIndex = senddetails_1(pPaper, pClient);
     if (NULL == piIndex)
     {
-      printf("fail\n");
+      Log(CLIENT_LOG_FILE, "SendFile failed", "SendDetailsInternal", LOGLEVEL_INFO, NULL);
+      return -1;
     }
     else
     {
-      printf("Index = %d, Chunk Size = %d\n", *piIndex, iRead);
-      pPaper->iPaperNo = *piIndex;
+      if (-1 == iServerIndex)
+      {
+        iServerIndex = *piIndex;
+      }
     }
 
-    //printf("We are at %ld", lseek(iFd, 0, SEEK_CUR));
-    //getchar();
+    pPaper->iPaperNo = iServerIndex;
     ++pPaper->iChunkIndex;
   }
-
-  pPaper->iChunkIndex = -1;
-  piIndex = senddetails_1(pPaper, pClient);
-  if (NULL == piIndex)
-   printf("fail last\n");
-  else
-    printf("LAST content\n");
 
   close(iFd);
 
@@ -185,7 +177,6 @@ int FetchDetailsInternal(int *piIndex, CLIENT *pClient)
       for (iLoop = 0; iLoop < pPaper->lChunkSize; ++iLoop)
         printf("%c", pPaper->ByteFileChunk[iLoop]);
 
-      sleep(5);
       if (0 == iChunkIndex)
       {
         lRemainingSize = pPaper->lFileSize - pPaper->lChunkSize;
@@ -213,7 +204,8 @@ int FetchInfoInternal(int *piIndex, CLIENT *pClient)
 
   if (NULL == pPaper)
   {
-    printf("fail\n");
+    Log(CLIENT_LOG_FILE, "FetchInfo failed", "FetchInfoInternal", LOGLEVEL_INFO, NULL);
+    return -1;
   }
   else
   {
@@ -258,11 +250,10 @@ int FetchListInternal(CLIENT *pClient)
 
     if (NULL == pPaper)
     {
-      printf("fail\n");
-      break;
+      Log(CLIENT_LOG_FILE, "fetch_list failed", "FetchListInternal", LOGLEVEL_INFO, NULL);
+      return -1;
     }
 
-    sleep(5);
     if (0 == pPaper->iPaperNo)
     {
       Log(CLIENT_LOG_FILE, "Got 0 PaperNo", "FetchListInternal", LOGLEVEL_INFO, NULL);
@@ -273,6 +264,7 @@ int FetchListInternal(CLIENT *pClient)
     ++iIndex;
   }
 }
+
 
 int RemoveDetailsInternal(int *piIndex, CLIENT *pClient)
 {
@@ -286,7 +278,7 @@ int RemoveDetailsInternal(int *piIndex, CLIENT *pClient)
   piRet = removedetails_1(piIndex, pClient);
   if (NULL == piRet)
   {
-    printf("fail\n");
+    return -1;
   }
   else if(-1 == *piRet)
   {
@@ -298,10 +290,17 @@ int RemoveDetailsInternal(int *piIndex, CLIENT *pClient)
   }
 }
 
+
 void DisplayHelp()
 {
-  printf("\nPAPER STORAGE client Help\n");
+  printf("\nusage:\n");
+  printf("paperclient <host_name> add 'Author Name1[,Author Name2,...]' ‘Paper Title’ <file_path>\n");
+  printf("paperclient <host_name> remove <number>\n");
+  printf("paperclient <host_name> list\n");
+  printf("paperclient <host_name> info <number>\n");
+  printf("paperclient <host_name> fetch <number>\n");
 }
+
 
 int ValidateString(const char *pszString)
 {
@@ -316,15 +315,6 @@ int ValidateString(const char *pszString)
   {
     return -1;
   }
-
-  // if (
-  //     ('\'' != pszString[0] ) ||
-  //     ('\'' != pszString[sLen-1])
-  //     )
-  // {
-  //   printf("Why hre ?[ %c ] , [ %c ] ", pszString[0], pszString[sLen-1]);
-  //   return -1;
-  // }
 
   return 0;
 }

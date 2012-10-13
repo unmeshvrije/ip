@@ -73,7 +73,8 @@ int* senddetails_1_svc(PAPER *pPaper, struct svc_req *req)
 {
   static int iIndex;
 
-  static SERVER_PAPER ServerPaper;
+  SERVER_PAPER ServerPaper;
+  SERVER_PAPER_LIST *pServerPaperList;
 
   if (NULL == pPaper)
   {
@@ -82,7 +83,6 @@ int* senddetails_1_svc(PAPER *pPaper, struct svc_req *req)
 
   //
   // This should be done only once.
-  // We will same procedure for single file to transfer data
   //
   if (-1 == pPaper->iPaperNo)
   {
@@ -93,29 +93,22 @@ int* senddetails_1_svc(PAPER *pPaper, struct svc_req *req)
     iIndex = g_iPaperID;
     
     ServerPaper.iPaperIndex = g_iPaperID;
-    strcpy(ServerPaper.szAuthors[0], pPaper->szAuthors);
+    strcpy(ServerPaper.szAuthors, pPaper->szAuthors);
     strcpy(ServerPaper.szPaperTitle, pPaper->szPaperTitle);
-    pPaper->iPaperNo = g_iPaperID;
-
     ServerPaper.lFileSize = pPaper->lFileSize;
-  
-//    iIndex = pPaper->iPaperNo;
 
     ServerPaper.pFileData =  (BYTE*)malloc(sizeof(BYTE) * pPaper->lFileSize);
-
     memcpy(ServerPaper.pFileData, pPaper->ByteFileChunk, pPaper->lChunkSize);
-  }
-  else if(-1 == pPaper->iChunkIndex)
-  {
-    //
-    // Add the node
-    //
-    Log(SERVER_LOG_FILE, "Calling AddToList", "senddetails_1_svc", LOGLEVEL_INFO, NULL);
+
     AddToList(&ServerPaper, &pPaperListHead, &pPaperListTail);
   }
-  else
+  else// if(-1 == pPaper->iChunkIndex)
   {
-    memcpy(ServerPaper.pFileData + (pPaper->iChunkIndex * MAX_BUF), pPaper->ByteFileChunk, pPaper->lChunkSize);
+    pServerPaperList = GetNodeFromList(pPaperListHead, pPaper->iPaperNo);
+    if (NULL != pServerPaperList)
+    {
+      memcpy(pServerPaperList->Data.pFileData + (pPaper->iChunkIndex * MAX_BUF), pPaper->ByteFileChunk, pPaper->lChunkSize);
+    }
   }
 
   return &iIndex; 
@@ -148,7 +141,7 @@ PAPER* fetchinfo_1_svc(int *piPaperIndex, struct svc_req *req)
       if (pNavigate->Data.iPaperIndex == iPaperIndex)
       {
         Paper.iPaperNo = pNavigate->Data.iPaperIndex;
-        strcpy(Paper.szAuthors, pNavigate->Data.szAuthors[0]);
+        strcpy(Paper.szAuthors, pNavigate->Data.szAuthors);
         strcpy(Paper.szPaperTitle, pNavigate->Data.szPaperTitle);
         Paper.lFileSize = pNavigate->Data.lFileSize;
         chFound = 'y';
@@ -200,7 +193,7 @@ PAPER* fetchdetails_1_svc(FILEINFO *pFileInfo, struct svc_req *req)
       {
         chFound = 'y';
         Paper.iPaperNo = pNavigate->Data.iPaperIndex;
-        strcpy(Paper.szAuthors, pNavigate->Data.szAuthors[0]);
+        strcpy(Paper.szAuthors, pNavigate->Data.szAuthors);
         strcpy(Paper.szPaperTitle, pNavigate->Data.szPaperTitle);
         Paper.lFileSize = pNavigate->Data.lFileSize;
 
@@ -268,7 +261,7 @@ PAPER* fetchlist_1_svc(int *pithElement, struct svc_req *req)
   if (NULL != pNavigate)
   {
     Paper.iPaperNo = pNavigate->Data.iPaperIndex;
-    strcpy(Paper.szAuthors, pNavigate->Data.szAuthors[0]);
+    strcpy(Paper.szAuthors, pNavigate->Data.szAuthors);
     strcpy(Paper.szPaperTitle, pNavigate->Data.szPaperTitle);
   }
 

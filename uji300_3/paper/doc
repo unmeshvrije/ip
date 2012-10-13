@@ -1,0 +1,146 @@
+\documentclass{report}
+\usepackage{enumerate}
+\begin{document}
+\title{\bf Internet Programming (Assignment 3)}
+\author{\bf Unmesh Joshi (VUnetID: uji300) and Koustubha Bhat (VUnetId: kbt350)}
+\date{17th October 2012}
+\maketitle
+\hrule
+\bigskip
+\chapter{Assignment Documentation}
+
+\section{Platforms}
+\paragraph
+1 C Programs:\\ 
+\begin{itemize}
+\item gcc version 4.7.0 20120507 (Red Hat 4.7.0-5) (GCC) 
+\item Thread model: posix
+\item Target: x86\_64-redhat-linux
+\end{itemize}
+
+\section{What to expect after \emph{make}}
+A directory structure filled with executables at right place(s) as posted on the URL\@.
+
+\section{Explanations of programs}
+\paragraph
+1 {\bf serv1:}\\
+{\bf Requirements:}
+\begin{enumerate}
+\item Server maintains a counter and this is a persistent variable.
+\item Server listens to client requests.
+\item Each client request is processed by incrementing the common persistent counter.
+\item Server sends the incremented counter value back to the client.
+\item The counter value 0 is the initial one and is never given to an actual client. Essentially counter value cannot be negative.
+\end{enumerate}
+\subparagraph
+{\bf Explanation:}
+We used file to maintain the counter\@. flock() allows us to have mutual exclusion between processes for accessing the counter\@.
+\paragraph
+2 {\bf serv2:}\\
+{\bf Requirements:}
+\begin{enumerate}
+\item Server maintains a counter and this is a persistent variable.
+\item Server listens to client requests.
+\item {\bf Each client request is processed by separate process.}
+\item Server sends the incremented counter value back to the client.
+\item The counter value 0 is the initial one and is never given to an actual client. Essentially counter value cannot be negative.
+\end{enumerate}
+\subparagraph
+{\bf Explanation:}
+Multiple processes may try to access and modify file containing counter simultaneously\@. File lock prevents this and thus maintains
+consistency of the file\@.
+Initially we thought of shared memory to maintain counters and semaphores for mutual exclusion, however maintaining counter across
+server crashes would not have been possible\@. Periodically committing this value to file would solve this problem\@. That is why
+we chose file to store counter\@. System call \emph{flock()} gives us the desired effect of mutual exclusion\@.
+
+
+\paragraph
+3 {\bf serv3:}\\
+{\bf Requirements:}
+\begin{enumerate}
+\item Server maintains a counter and this is a persistent variable.
+\item Server listens to client requests.
+\item {\bf Each client request is processed by one of preforked processes.}
+\item Server sends the incremented counter value back to the client.
+\item The counter value 0 is the initial one and is never given to an actual client. Essentially counter value cannot be negative.
+\end{enumerate}
+\subparagraph
+{\bf Explanation:}
+We are creating 10 processes and every process waits for client connection\@. The main function (process) will wait for all
+children to die\@. Each child process blocks on \emph{accept()} call which is surrounded by semaphore for  mutual exclusion\@.
+This arrangement is done for the following purpose: When client request comes, only one server process should be signaled of this
+event\@. If we do not use semaphores around \emph{accept()} call, then all processes would wait for clients, causing overhead of
+signalling each one by system, though only one succeeds to connect\@.~\cite{spyros}
+\subparagraph
+\*The requirement is that clients should get the numbers as per their sequence of requests\@. In the preforked approach, any of the
+child processes that are executing accept() call can take the request and establish connection\@. Depending on when they acquire
+the lock of the file to be accessed (maybe competing with other child processes in doing so), to get and increment the counter, particular number will be sent (assigned) to the corresponding client\@. However, what is ultimately ensured is that no two clients receive the same number (of course until the counter overflows!)\@. This concurrency problem can be explained in the context of \lq \lq linearization \rq \rq\ \@. In a given timeline, it suffices to prove the correctness of the implementation, if we can prove that in a uniprocessor setting, the client that received the lesser counter value came up prior to the one that received a higher value, without contradicting any laws of the environment\@. In this case, a server process incrementing the counter value would be  a good linearization point\@.
+
+\paragraph
+4 {\bf client:}\\
+{\bf Requirements:}
+\begin{enumerate}
+\item Resolve IP address of server.
+\item Connect to server.
+\item Request for counter.
+\item Print the counter.
+\end{enumerate}
+\subparagraph
+{\bf Explanation:}
+getaddrinfo() function is used to fetch IP address from host name at client side\@. From the list of IP addresses returned by
+getaddrinfo(), we ignore "0.0.0.0" IP address\@. It is used for \emph{resolving Domain Name} and hence cannot be expected to work
+for local hostnames or computer names\@. To test concurrent connections, we had shell script to repeatedly execute client program\@.
+
+\paragraph
+5 {\bf talk:}\\
+{\bf Requirements:}
+\begin{enumerate}
+\item Server takes no parameter and starts listening on port.
+\item Client takes server host name as parameter and has to connect to the same.
+\item Multiple servers on same machine talking to their corresponding clients.
+\item Use ncurses to separate the text written by the two parties.
+\end{enumerate}
+\subparagraph
+{\bf Explanation:}
+Client or server both have to read from console and read from network (socket) simultaneously\@. Hence we chose multithreading\@.
+One thread will read from console and write to the socket\@. Other thread will do vice a versa\@. 
+\subparagraph
+\*As both threads are using the one and only console output (one for reading, one for writing), it gives jumbled output because of
+interpenetration of texts\@. Thus we use ncurses library for separation of text areas\@.
+\subparagraph
+\*We support multiple servers (on the same machine) connecting to their corresponding  clients\@ through separate ports for initial
+connection and actual communication\@. However, although networking part of this feature is working properly, due to ncurses
+library issues, message display on terminal is not working in case of multiple servers instances\@.
+\subparagraph
+\*In order to close the chat session gracefully, we have made the server and the client agree upon a simple protocol as described
+below: When either of the parties chatting together, decides to end the session, he/she enters \^D (\^D + ENTER)\@.
+
+\section{Answers to the questions}
+\paragraph
+1 Answer to the Question A:\\ 
+\paragraph
+2 Answer to the Question B:\\
+It is difficult to transfer strings of arbitrary size using Sun-RPC, because we cannot pass pointers as function arguments, we cannot share file descriptors. Basically servers and clients do not share the same address space\@.
+How can we solve ?
+
+\paragraph
+3 Answer to the Question C:\\
+One-process-per-client is the most appropriate server structure for this problem\@. As it is communication between only two
+parties, server will not talk to another client unless current client is disconnected\@.
+\paragraph
+4 Answer to the Question D:\\
+Yes. We can have client and server executing simultaneously on the same machine\@. Two servers executing simultaneously on the
+same machine is also possible with one socket for connection and another for communication\@. So that connection socket will be
+(again and again) resued by multiple servers\@. Using this approach, we can run SAME program to create multiple servers
+running on same machine simultaneously\@. Please refer another pdf for diagram\@.
+
+\paragraph
+5 Answer to the Question E:\\
+We used Multithreading where one thread reads from console while the other reads from the network. To separate the text area of
+the two parties, ncurses library is used\@.
+\\
+
+\begin{thebibliography}{99}
+\bibitem{spyros}Spyros Voulgaris, Lecture slides (Sockets), Fall 2012, Vrije Universiteit.
+\end{thebibliography}
+\end{document}
