@@ -35,8 +35,6 @@ Revision History:
 //	H E A D E R S.
 /////////////////////////////////////////////////////////////////////
 
-#include "hotelgwclient.h"
-
 #include "../common.h"
 
 #include <fcntl.h>
@@ -54,17 +52,6 @@ Revision History:
 
 #define CLIENT_LOG_FILE "./clientgw.log"
 #define SERVER_PORT 9999
-
-
-/////////////////////////////////////////////////////////////////////
-//	G L O B A L S
-/////////////////////////////////////////////////////////////////////
-
-COMMAND Commands[] = {
-                      {COMMAND_LIST_ID, COMMAND_LIST_STR, 0},
-                      {COMMAND_BOOK_ID, COMMAND_BOOK_STR, 2},
-                      {COMMAND_GUESTS_ID, COMMAND_GUESTS_STR, 1},
-                    };
 
 
 /////////////////////////////////////////////////////////////////////
@@ -124,9 +111,13 @@ int main(int argc, char *argv[], char *envp[])
   char szMessage[25];
   char szCommandLine[MAX_BUF];
 
-  if (1 == argc)
+  if (argc < 3)
   {
-    printf("Usage: ./hotelgwclient <IP Address> <options>\n");
+    printf("\nUsage: hotelgwclient <server_name> <command> [<arguments>]\n");
+    printf("Commands:\n");
+    printf("\tlist\t- lists the availability of rooms for first, second and third type rooms\n");
+    printf("\tbook\t- books the specified <kind of room> for the particular <guest>. eg: book ONE John\n");
+    printf("\tguests\t- lists the guests who have been allocated rooms already.\n");
     exit(0);
   }
 

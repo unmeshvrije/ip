@@ -48,27 +48,36 @@ class GatewayThread extends Thread
     return strCommand;
   }
 
-  private static RoomType getRoomType (String strCommandLine)
+  private static int getRoomType (String strCommandLine)
   {
     int iRoomType;
     StringTokenizer strTokenize = new StringTokenizer (strCommandLine, " ");
 
     if (strTokenize.hasMoreTokens ())
     {
-	strTokenize.nextToken ();//Command
+	   strTokenize.nextToken ();//Command
     }
     if (strTokenize.hasMoreTokens())
     {
-      iRoomType = Integer.parseInt(strTokenize.nextToken());
+      try
+      {
+        iRoomType = Integer.parseInt(strTokenize.nextToken());
+      }
+      catch(NumberFormatException ne)
+      {
+        return -1;        
+      }
       switch(iRoomType)
       {
-         case 1: return RoomType.ONE;
-	 case 2: return RoomType.TWO;
-	 case 3: return RoomType.THREE;
+         case 1:
+	       case 2: 
+         case 3: return iRoomType;
+
+         default: return -1;
       }
     }
 
-    return RoomType.INVALID;
+    return -1;
   }
 
   private static String getName (String strCommandLine)
@@ -85,8 +94,8 @@ class GatewayThread extends Thread
         strTokenize.nextToken ();
         while (strTokenize.hasMoreTokens())
         {
-	  strBuffer.append(strTokenize.nextToken ());
-	  strBuffer.append(" ");
+	       strBuffer.append(strTokenize.nextToken ());
+	       strBuffer.append(" ");
         }
       }
     }
@@ -176,13 +185,20 @@ class GatewayThread extends Thread
 	  }
 	else			//book
 	  {
-	    RoomType room = getRoomType(strCommandLine);
-	    String name = getName(strCommandLine);
-	    boolean boRet = iReserve.book(room, name);
-	    if (true == boRet)
-	      strResult = "Booked!\n";
-	    else
-	      strResult = "Room not available\n";
+	    int room = getRoomType(strCommandLine);
+      if (room == -1)
+      {
+        strResult = "Invalid input\n";
+      }
+      else
+      {
+  	    String name = getName(strCommandLine);
+  	    boolean boRet = iReserve.book(room, name);
+  	    if (true == boRet)
+  	      strResult = "Booked!\n";
+  	    else
+  	      strResult = "Room not available\n";
+      }
 	  }
 	  }
 	  catch(Exception e)
@@ -190,9 +206,9 @@ class GatewayThread extends Thread
 	    e.printStackTrace();
 	  }
 
-	out.print (strResult + "\0");
-	out.close ();
-      }
+	 out.print (strResult + "\0");
+	 out.close ();
+   }
 
     //sock.close();
   }

@@ -17,7 +17,7 @@ extern "C" {
 #define MAX_AUTHORS 5
 #define MAX_FILE_NAME 256
 #define MAX_PAPER_NAME 200
-#define MAX_AUTHOR_NAME 500
+#define MAX_AUTHOR_NAME 50
 
 struct PAPER {
 	int iPaperNo;
